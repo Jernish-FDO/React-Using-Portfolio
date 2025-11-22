@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+:root {
+  --bg-body: #0f172a;
+  --bg-card: rgba(30, 41, 59, 0.75);
+  --bg-nav: rgba(15, 23, 42, 0.8);
+  /* Updated from 0.9 to 0.8 */
+  --primary: #0ea5e9;
+  /* Updated from #38bdf8 to #0ea5e9 */
+  --secondary: #6366f1;
+  /* Updated from #a78bfa to #6366f1 */
+  --accent: #f472b6;
+  /* Updated from #10b981 to #f472b6 */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --font-main: 'Outfit', sans-serif;
+}
+
+@keyframes glitch-1 {
+  0% {
+    clip-path: inset(20% 0 80% 0);
+    transform: translate(-2px, 1px);
+  }
+
+  20% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate(2px, -1px);
+  }
+
+  40% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(-2px, 2px);
+  }
+
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(2px, -2px);
+  }
+
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-1px, 1px);
+  }
+
+  100% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(1px, -1px);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    clip-path: inset(10% 0 60% 0);
+    transform: translate(2px, -1px);
+  }
+
+  20% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    clip-path: inset(30% 0 20% 0);
+    transform: translate(2px, 1px);
+  }
+
+  60% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(-1px, -2px);
+  }
+
+  80% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(1px, 2px);
+  }
+
+  100% {
+    clip-path: inset(20% 0 70% 0);
+    transform: translate(-2px, 1px);
+  }
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 0.4s infinite linear alternate-reverse;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 0.4s infinite linear alternate-reverse;
+}
+
+body.light-mode {
+  --bg-body: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-nav: rgba(255, 255, 255, 0.9);
+  --primary: #0284c7;
+  --secondary: #6366f1;
+  --accent: #059669;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  transition: background 0.3s, color 0.3s;
+  cursor: none;
+}
+
+/* Hide default cursor on all interactive elements */
+* {
+  cursor: none !important;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR STYLES
+   ======================================== */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+      var(--primary) 0%,
+      var(--accent) 50%,
+      var(--secondary) 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(15, 23, 42, 0.5);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+      var(--secondary) 0%,
+      var(--accent) 50%,
+      var(--primary) 100%);
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.8), 0 0 40px rgba(14, 165, 233, 0.4);
+  transform: scale(1.05);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg,
+      var(--accent) 0%,
+      var(--primary) 100%);
+}
+
+/* Corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) rgba(15, 23, 42, 0.5);
+}
+
+/* Light mode scrollbar */
+body.light-mode ::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.8);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+      var(--primary) 0%,
+      var(--accent) 50%,
+      var(--secondary) 100%);
+  border: 2px solid rgba(241, 245, 249, 0.8);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.3);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+      var(--secondary) 0%,
+      var(--accent) 50%,
+      var(--primary) 100%);
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.5), 0 0 40px rgba(2, 132, 199, 0.3);
+}
+
+body.light-mode * {
+  scrollbar-color: var(--primary) rgba(241, 245, 249, 0.8);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar animation on page scroll */
+@keyframes scrollGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.8), 0 0 40px rgba(14, 165, 233, 0.4);
+  }
+}
+
+/* Apply glow animation when actively scrolling */
+::-webkit-scrollbar-thumb:active {
+  animation: scrollGlow 0.6s ease-in-out;
+}
