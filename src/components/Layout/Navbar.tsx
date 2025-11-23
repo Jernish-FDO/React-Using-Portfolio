@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             <nav className="fixed w-full px-4 sm:px-6 md:px-[8%] py-4 sm:py-5 md:py-6 z-50 flex justify-between items-center bg-bg-nav backdrop-blur-md border-b border-border transition-all duration-300">
                 <Link
                     to="/"
-                    className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:animate-pulse"
+                    className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text  hover:animate-pulse"
                     onClick={playClick}
                 >
                     Jernish<span className="text-accent">.ECE</span>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
                             className="text-text-main hover:text-accent transition-colors p-2 border border-border rounded-lg hover:border-accent"
                             title="Open Terminal (Ctrl+T)"
                         >
-                            <span className="text-xs font-mono">$_</span>
+                            <span className="text-xs font-mono p-2">$_Terminal</span>
                         </button>
                     </div>
                 </div>

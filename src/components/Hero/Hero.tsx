@@ -70,13 +70,13 @@ const Hero: React.FC = () => {
                     className="flex flex-col sm:flex-row gap-3 sm:gap-5"
                 >
                     <MagneticButton
-                        href="#projects"
+                        href="/projects"
                         className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-bold bg-primary text-white shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_40px_rgba(56,189,248,0.7)] transition-all duration-300 inline-block text-sm sm:text-base text-center"
                     >
                         My Systems
                     </MagneticButton>
                     <MagneticButton
-                        href="#knowledge"
+                        href="/knowledge"
                         className="px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-bold border-2 border-border text-text-main hover:border-text-main transition-all duration-300 inline-block text-sm sm:text-base text-center"
                     >
                         My Logic

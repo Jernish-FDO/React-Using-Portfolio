@@ -43,7 +43,7 @@ const Terminal: React.FC<TerminalProps> = ({ isOpen, onClose }) => {
                 output = '1. Autonomous Line Follower (C++)\n2. Home Automation WebServer (IoT)\n3. Oscilloscope Data Viz (D3.js)';
                 break;
             case 'contact':
-                output = 'Email: jernish@example.com';
+                output = 'Email: amalajernish228@gmail.com';
                 break;
             case 'clear':
                 setHistory([]);
